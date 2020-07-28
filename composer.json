@@ -1,0 +1,29 @@
+{
+  "name": "isbkch/ip-geolocator-swoole",
+  "homepage": "https://github.com/isbkch/ip-geolocator-swoole",
+  "description": "IP Geolocator and ExchangeRate Swoole Service",
+  "keywords": [
+    "geoip",
+    "geolocation",
+    "exchangerate",
+    "currency"
+  ],
+  "type": "project",
+  "license": "MIT",
+  "require": {
+    "php": "^7.3.0",
+    "ext-json": "*",
+    "ext-simplexml": "*",
+    "ext-curl": "*",
+    "nikic/fast-route": "^1.3",
+    "maxmind-db/reader": "^1.4"
+  },
+  "require-dev": {
+    "eaglewu/swoole-ide-helper": "@dev"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/"
+    }
+  }
+}

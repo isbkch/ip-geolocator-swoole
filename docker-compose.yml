@@ -1,0 +1,10 @@
+version: '3.4'
+
+services:
+    gclib:
+        image: isbkch/igs
+        ports:
+            - 90:9500
+        environment:
+            - SWOOLE_PORT=9500
+            - SWOOLE_WORKER=2

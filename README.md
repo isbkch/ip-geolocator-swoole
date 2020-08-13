@@ -19,8 +19,8 @@ You can run the api with Docker.
 version: '3.4'
 
 services:
-    gclib:
-        image: appaydin/gclib
+    ip-geolocator:
+        image: isbkch/ip-geolocator-swoole
         ports:
             - 90:9500
         environment:

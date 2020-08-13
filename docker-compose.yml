@@ -1,8 +1,8 @@
 version: '3.4'
 
 services:
-    gclib:
-        image: isbkch/igs
+    ip-geolocator:
+        image: isbkch/ip-geolocator-swoole
         ports:
             - 90:9500
         environment:

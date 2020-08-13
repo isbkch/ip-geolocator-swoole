@@ -16,7 +16,7 @@ RUN composer install \
 #
 # PHP7
 #
-FROM php:7.3-alpine
+FROM php:7.4-alpine
 
 RUN apk add autoconf
 RUN apk add alpine-sdk

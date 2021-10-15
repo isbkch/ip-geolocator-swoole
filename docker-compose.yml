@@ -8,3 +8,4 @@ services:
         environment:
             - SWOOLE_PORT=9500
             - SWOOLE_WORKER=2
+            - DBCITY='https://download.maxmind.com/app/geoip_download_by_token?XXXXX

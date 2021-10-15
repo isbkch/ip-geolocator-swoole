@@ -21,11 +21,11 @@ class MaxmindDbUpdate extends AbstractTimer
      * @var array
      */
     public static $files = [
-        /*'country' => [
-            'path' => 'data/GeoLite2-Country.mmdb',
-            'version' => 'data/GeoLite2-Country.version',
-            'const' => 'DBCOUNTRY'
-        ],*/
+        // 'country' => [
+        //     'path' => 'data/GeoLite2-Country.mmdb',
+        //     'version' => 'data/GeoLite2-Country.version',
+        //     'const' => 'DBCOUNTRY'
+        // ],
         'city' => [
             'path' => 'data/GeoLite2-City.mmdb',
             'version' => 'data/GeoLite2-City.version',
@@ -47,10 +47,11 @@ class MaxmindDbUpdate extends AbstractTimer
             // Check Version
             if (($verNumber === false) || $verNumber < time()) {
                 echo "Maxmind-DB downloading new version...\n";
-                
+
                 // Download Tar File
                 $tar = Helper::getRootDir(str_replace('.mmdb', '.tar.gz', $file['path']));
-                
+
+                // if ($this->downFile($tar, 'https://download.maxmind.com/app/geoip_download_by_token?edition_id=GeoLite2-City&date=20211012&suffix=tar.gz&token=v2.local.agl_J5uaef5jyuwccIOt4JkrnZs3RikxEKCzYe2BmHdWutCXxKcFFxhxPJNcvYdxvq3idsDv3t6_qT_lv6kS54ro6sCPJrkG6PxouLWfCEm-gQWbL-fei_AUj7X8pUo7PJGIr7tXf23cxCPANAf6DRM15vGTpeKaS2Scl5kHN1ywcquq3DJRe7ek9zIRN11LRqHo3A')) {
                 if ($this->downFile($tar, $_ENV[$file['const']])) {
                     // Extract Archive
                     $mmdb = $this->extractTarFile($tar);

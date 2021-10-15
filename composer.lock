@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f37ccfcf3882f2e10067c4f2dbde5434",
+    "content-hash": "055e8d8134a5808a5d88f9922ed4ff3c",
     "packages": [
         {
             "name": "maxmind-db/reader",
@@ -65,6 +65,10 @@
                 "geolocation",
                 "maxmind"
             ],
+            "support": {
+                "issues": "https://github.com/maxmind/MaxMind-DB-Reader-php/issues",
+                "source": "https://github.com/maxmind/MaxMind-DB-Reader-php/tree/v1.10.1"
+            },
             "time": "2021-04-14T17:49:35+00:00"
         },
         {
@@ -111,6 +115,10 @@
                 "router",
                 "routing"
             ],
+            "support": {
+                "issues": "https://github.com/nikic/FastRoute/issues",
+                "source": "https://github.com/nikic/FastRoute/tree/master"
+            },
             "time": "2018-02-13T20:26:39+00:00"
         }
     ],
@@ -121,17 +129,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/wudi/swoole-ide-helper.git",
-                "reference": "fc8fe156391960c75505dd1ef869f52d4e109dc6"
+                "reference": "70147a030c2dd5c1171bedae3a31970f3bf9c280"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wudi/swoole-ide-helper/zipball/fc8fe156391960c75505dd1ef869f52d4e109dc6",
-                "reference": "fc8fe156391960c75505dd1ef869f52d4e109dc6",
+                "url": "https://api.github.com/repos/wudi/swoole-ide-helper/zipball/70147a030c2dd5c1171bedae3a31970f3bf9c280",
+                "reference": "70147a030c2dd5c1171bedae3a31970f3bf9c280",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.0"
             },
+            "default-branch": true,
             "type": "library",
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -156,7 +165,11 @@
                 "sublime",
                 "swoole"
             ],
-            "time": "2020-11-28T15:34:08+00:00"
+            "support": {
+                "issues": "https://github.com/wudi/swoole-ide-helper/issues",
+                "source": "https://github.com/wudi/swoole-ide-helper/tree/master"
+            },
+            "time": "2021-06-02T17:13:45+00:00"
         }
     ],
     "aliases": [],
@@ -167,11 +180,11 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": "^7.3.0",
+        "php": "^8",
         "ext-json": "*",
         "ext-simplexml": "*",
         "ext-curl": "*"
     },
     "platform-dev": [],
-    "plugin-api-version": "1.1.0"
+    "plugin-api-version": "2.1.0"
 }

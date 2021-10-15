@@ -11,7 +11,7 @@ Written using Swoole Http Server. It achieves an average "35k/sec" request on a 
 * [Maxmind Reader](https://github.com/maxmind/MaxMind-DB-Reader-php)
 
 #### Automatic Update
-Swool Scheduler is made with continuous update. The update is checked every 24 hours. The database is downloaded 2 times in one month.
+Swoole Scheduler is made with continuous update. The update is checked every 24 hours. The database is downloaded 2 times in one month.
 
 ## Installation
 You can run the api with Docker.

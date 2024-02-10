@@ -3,7 +3,7 @@
 namespace App;
 
 use App\Library\Helper;
-use Swoole\Http\Server as HttpServer;
+use OpenSwoole\Http\Server as HttpServer;
 
 class TimerKernel
 {
@@ -25,19 +25,6 @@ class TimerKernel
     public function __construct(HttpServer $server)
     {
         $this->server = $server;
-
-        // Load Timers
-        $timers = include Helper::getRootDir('config/timers.php');
-        foreach ($timers as $timer) {
-            switch ($timer[0]) {
-                case 'timer':
-                    $server->tick($timer[2] ? 1000 : $timer[1] * 1000, [$this, 'call'], [$timer[3], $timer[1] * 1000, $timer[2]]);
-                    break;
-                case 'timeout':
-                    $server->after($timer[2] ? 1000 : $timer[1] * 1000, [$this, 'call'], [$timer[3], $timer[1] * 1000, $timer[2]]);
-                    break;
-            }
-        }
     }
 
     /**

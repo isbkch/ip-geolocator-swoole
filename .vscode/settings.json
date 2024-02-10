@@ -1,8 +1,10 @@
 {
     "cSpell.words": [
         "geoip",
+        "geolocate",
         "geolocation",
         "Geolocator",
+        "mmdb",
         "Swoole"
     ]
 }

@@ -4,7 +4,6 @@ namespace App\Controller;
 
 use App\Library\AbstractController;
 use App\Library\Helper;
-use App\Timers\MaxmindDbUpdate;
 use MaxMind\Db\Reader;
 
 class GeoController extends AbstractController
@@ -43,7 +42,7 @@ class GeoController extends AbstractController
     public function __construct()
     {
         // Open City DB
-        $db = Helper::getRootDir(MaxmindDbUpdate::$files['city']['path']);
+        $db = Helper::getRootDir('data/GeoLite2-City_20240209/GeoLite2-City.mmdb');
         if (file_exists($db)) {
             $this->reader = new Reader($db);
         }

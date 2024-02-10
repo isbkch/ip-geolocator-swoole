@@ -4,9 +4,9 @@ require dirname(__DIR__) . '/vendor/autoload.php';
 
 use App\Kernel;
 use App\TimerKernel;
-use Swoole\Http\Request;
-use Swoole\Http\Response;
-use Swoole\Http\Server as HttpServer;
+use OpenSwoole\Http\Request;
+use OpenSwoole\Http\Response;
+use OpenSwoole\Http\Server as HttpServer;
 
 class server
 {
@@ -27,11 +27,11 @@ class server
     public function __construct()
     {
         $http = new HttpServer($this::HOST, $_ENV['SWOOLE_PORT'] ?? $this::PORT);
-        $http->set(['worker_num' => $_ENV['SWOOLE_WORKER'] ?? '2']);
+        $http->set(['worker_num' => $_ENV['SWOOLE_WORKER'] ?? '3']);
 
         // Events
-        $http->on('start', [$this, 'onStart']);
-        $http->on('request', [$this, 'onRequest']);
+        $http->on('Start', [$this, 'onStart']);
+        $http->on('Request', [$this, 'onRequest']);
 
         // Run
         $http->start();

@@ -20,8 +20,8 @@ FROM php:8-fpm-alpine
 
 RUN apk add autoconf
 RUN apk add alpine-sdk
-RUN pecl install swoole && \
-    docker-php-ext-enable swoole
+RUN pecl install openswoole && \
+    docker-php-ext-enable openswoole
 
 RUN docker-php-ext-install opcache && \
     touch /usr/local/etc/php/conf.d/opcache.ini && \

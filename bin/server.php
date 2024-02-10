@@ -71,4 +71,3 @@ class server
 }
 
 new server();
-

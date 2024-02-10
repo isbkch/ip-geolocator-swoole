@@ -14,9 +14,9 @@ RUN composer install \
     --prefer-dist
 
 #
-# PHP7
+# PHP8
 #
-FROM php:7.4-alpine
+FROM php:8-fpm-alpine
 
 RUN apk add autoconf
 RUN apk add alpine-sdk

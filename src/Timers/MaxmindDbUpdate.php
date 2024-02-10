@@ -21,16 +21,16 @@ class MaxmindDbUpdate extends AbstractTimer
      * @var array
      */
     public static $files = [
-        /*'country' => [
+        'country' => [
             'path' => 'data/GeoLite2-Country.mmdb',
             'version' => 'data/GeoLite2-Country.version',
             'const' => 'DBCOUNTRY'
-        ],*/
-        'city' => [
-            'path' => 'data/GeoLite2-City.mmdb',
-            'version' => 'data/GeoLite2-City.version',
-            'const' => 'DBCITY'
-        ]
+        ],
+        // 'city' => [
+        //     'path' => 'data/GeoLite2-City.mmdb',
+        //     'version' => 'data/GeoLite2-City.version',
+        //     'const' => 'DBCITY'
+        // ]
     ];
 
     /**
@@ -47,10 +47,10 @@ class MaxmindDbUpdate extends AbstractTimer
             // Check Version
             if (($verNumber === false) || $verNumber < time()) {
                 echo "Maxmind-DB downloading new version...\n";
-                
+
                 // Download Tar File
                 $tar = Helper::getRootDir(str_replace('.mmdb', '.tar.gz', $file['path']));
-                
+
                 if ($this->downFile($tar, $_ENV[$file['const']])) {
                     // Extract Archive
                     $mmdb = $this->extractTarFile($tar);
@@ -68,7 +68,6 @@ class MaxmindDbUpdate extends AbstractTimer
 
                         echo sprintf("Maxmind-DB download completed! => %s \n", date('d-m-Y H:i'));
                     }
-
                 }
             }
         }
